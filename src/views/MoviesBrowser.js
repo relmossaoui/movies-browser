@@ -12,7 +12,7 @@ export default class MoviesBrowser extends React.Component {
 
         this.state = {
             movies : [],
-            keyword: ''
+            keyword: 'potter'
         }
 
         this.onKeywordChangeHandler = this.onKeywordChangeHandler.bind(this)
@@ -22,8 +22,10 @@ export default class MoviesBrowser extends React.Component {
         let keyword = e.target.value ;
         this.setState({ keyword })
 
-        let movies = await getMoviesByKeyword(keyword)
-
+        let movies = []
+        if (keyword) {
+            movies = await getMoviesByKeyword(keyword)
+        } 
         this.setState({ movies })
     }
 
@@ -37,7 +39,7 @@ export default class MoviesBrowser extends React.Component {
 
     render() {
         return (
-            <main>
+            <main className="movies">
                 <SearchInput keyword={this.state.keyword} onChange={this.onKeywordChangeHandler} />
                 <MoviesList movies={this.state.movies} />
             </main>

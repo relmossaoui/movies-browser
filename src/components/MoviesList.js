@@ -4,15 +4,13 @@ import MoviesItem from './MoviesItem'
 
 export default function MoviesList(props) {
     return (
-        <section className="movies-list" >
-            {
-                props.movies.map((movie) => {
+        <section className="movies-container" >
+            {   
+                props.movies.map((movie, index) => {
                     return (
                         <MoviesItem 
-                            title={movie.title}
-                            imgUrl={movie.imgUrl}
-                            releasesAt={movie.releasesAt}
-                            key={movie.title}
+                            movie={movie}
+                            key={index}
                         />
                     )
                 })

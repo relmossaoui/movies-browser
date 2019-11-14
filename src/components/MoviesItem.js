@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function MoviesItem(props) {
+export default function MoviesItem({ movie }) {
     return (
-        <article className="movies-item">
-            <h3>{props.title}</h3>
-            <img src={props.imgUrl} />
-            <h6>{props.releasesAt}</h6>
+        <article className="movie-card">
+            <h5>{movie.getTitle()}</h5>
+            <img src={movie.getPosterUrl()} alt={movie.getTitle()} />
+            <h6>({movie.getReleaseDate()})</h6>
         </article>
     )
 }

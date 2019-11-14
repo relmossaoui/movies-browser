@@ -1,4 +1,11 @@
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Description
+
+In this project, I am trying a simple movies browser application in ReactJs. I will use a class && functional stateless components in the first version, whereas a functional statefull components (using Hooks) in the second one. 
+
+- movies api used is : https://themoviedb.docs.apiary.io/#reference
 
 ## Available Scripts
 

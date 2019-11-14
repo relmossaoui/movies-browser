@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import MoviesBrowser from './views/MoviesBrowser'
 import * as serviceWorker from './serviceWorker';
+import 'font-awesome/css/font-awesome.min.css';
+
 
 ReactDOM.render(<MoviesBrowser />, document.getElementById('root'));
 

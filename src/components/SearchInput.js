@@ -3,13 +3,14 @@ import React from 'react'
 export default function SearchInput(props) {
 
     return (
-        <section>
+        <section className="search-container">
             <input 
-                placeholder="Enter keyword"
+                placeholder="Search a movie"
                 type="text" 
                 value={props.keyword} 
                 onChange={props.onChange} 
             />
+            <button><i className="fa fa-search"></i></button>
         </section>
     )
 }
